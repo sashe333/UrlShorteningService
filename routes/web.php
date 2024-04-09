@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UrlController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ UrlController::class, 'index'])->name('url');

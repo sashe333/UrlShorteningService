@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Url;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class UrlSeeder extends Seeder
 {
@@ -12,6 +13,6 @@ class UrlSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Url::factory(20)->create();
     }
 }
