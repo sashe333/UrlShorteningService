@@ -3,6 +3,9 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Domain\URL\Interfaces\UrlShortenerInterface;
+use App\Domain\URL\Services\UrlShortenerService;
+use Hashids\Hashids;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Url>
@@ -16,9 +19,11 @@ class UrlFactory extends Factory
      */
     public function definition(): array
     {
-        $shortUrl = 'to be or not to be';
+        $longUrl = $this->faker->url('https');
+        $shortUrl = "to be or not to be shortened";
+
         return [
-            'url' => $this->faker->url('https'),
+            'url' => $longUrl,
             'url_short' => $shortUrl,
             'short_url_access_count' => rand(0,20)
         ];
