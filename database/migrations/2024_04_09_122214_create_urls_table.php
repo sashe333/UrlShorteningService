@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('urls', function (Blueprint $table) {
             $table->id();
-            $table->string('url');
+            $table->longText('url');
             $table->string('url_short')->nullable();
             $table->unsignedInteger('short_url_access_count')->default(0);
             $table->timestamps();

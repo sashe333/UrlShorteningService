@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container" style="margin: 0rem 5rem 0rem 5rem ">
-        <h1>Hello World</h1>
+        <h1>URL Shortener</h1>
         <h5>Add a Link</h5>
         <form action="{{route ('url.store')}}"  method="POST">
             @csrf
